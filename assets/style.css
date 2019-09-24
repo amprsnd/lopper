@@ -1,3 +1,250 @@
-:root {
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+1p:400,700,900&display=swap');
 
+:root {
+  /* colors */
+  --primary: #F61067;
+  --secondary-100: #5E239D;
+  --secondary-200: #3A0475;
+  --secondary-300: #30124E;
+  --secondary-400: #150433;
+
+  --tetriary: #00F0B5;
+  --tetriary-light: #6DECAF;
+  --white: #FCFCFC;
+  --light-grey: #F4F4ED;
+  --headers: #30233D;
+  --main-text: #776C82;
+  --grey: #9B94A3;
+
+  --error: #F0002B;
+  --success: #10F65E;
+  --warning: #F67110;
+  --info: #00A8F0;
+
+  /* shadows */
+  --shadow-violet: 0px 8px 64px rgba(94, 35, 157, 0.25);
+  --shadow-green: 0px 8px 64px rgba(0, 240, 181, 0.25);
+  --shadow-pink: 0px 8px 64px rgba(246, 16, 103, 0.25);
+
+  /* headers */
+  --h1-size: 99px;
+  --h2-size: 54px;
+  --h3-size: 45px;
+  --h4-size: 36px;
+  --h5-size: 27px;
+  --h6-size: 18px;
+
+  --h1-line: 118px;
+  --h2-line: 80px;
+  --h3-line: 67px;
+  --h4-line: 53px;
+  --h5-line: 40px;
+  --h6-line: 27px;
+
+  --h-weight-1: 900;
+  --h-weight-2: 500;
+
+  font-family: 'M PLUS 1p', sans-serif;
+  color: var(--headers);
+  font-size: 18px;
+  line-height: 29px;
+}
+
+html, body, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: var(--h1-size);
+  font-weight: var(--h-weight-1);
+  line-height: var(--h1-line);
+}
+h2 {
+  font-size: var(--h2-size);
+  font-weight: var(--h-weight-2);
+  line-height: var(--h2-line);
+}
+h3 {
+  font-size: var(--h3-size);
+  font-weight: var(--h-weight-2);
+  line-height: var(--h3-line);
+}
+h4 {
+  font-size: var(--h4-size);
+  font-weight: var(--h-weight-2);
+  line-height: var(--h4-line);
+}
+h5 {
+  font-size: var(--h5-size);
+  font-weight: var(--h-weight-2);
+  line-height: var(--h5-line);
+}
+h6 {
+  font-size: var(--h6-size);
+  font-weight: var(--h-weight-2);
+  line-height: var(--h6-line);
+}
+
+.button {
+  display: block;
+  width: fit-content;
+  height: 45px;
+  line-height: 45px;
+  box-sizing: border-box;
+  padding: 0 45px;
+  background-color: var(--primary);
+
+  border: none;
+  border-radius: 100px;
+  border: 1px solid var(--primary);
+  
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--white);
+  text-decoration: none;
+
+  cursor: pointer;
+  outline: none;
+  transition-property: background-color, border, color;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+  margin: 3px;
+}
+
+.button:hover {
+  background-color: var(--secondary-100);
+  border: 1px solid var(--secondary-100);
+}
+
+.button:active {
+  background-color: transparent;
+  color: var(--secondary-100);
+  border: 1px solid var(--secondary-100);
+}
+
+section {
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 100%;
+  min-width: 320px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 120px 0 150px;
+  box-sizing: border-box;
+}
+
+
+.hero {
+  position: relative;
+  min-height: 80vh;
+  background: url('../assets/images/hero.jpg') 50% 50% no-repeat;
+  background-size: cover;
+  color: var(--white);
+}
+
+.hero .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  mix-blend-mode: multiply;
+}
+
+.hero .color {
+  z-index: 1;
+  background: var(--secondary-100);
+}
+.hero .gradient {
+  z-index: 2;
+  background: linear-gradient(90deg, var(--secondary-100) 0%, rgba(196, 196, 196, 0) 56.77%);
+}
+.hero .container {
+  position: relative;
+  z-index: 3;
+}
+
+header {
+  padding-top: 60px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.logo {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 43px;
+  letter-spacing: 2px;
+  flex-grow: 1;
+}
+
+nav {
+  width: 100%;
+  max-width: 880px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  flex-grow: 2;
+  justify-content: flex-end;
+}
+
+nav, nav a {
+  font-weight: 800;
+  font-size: 14.4px;
+  line-height: 30px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: var(--white);
+}
+
+nav a {
+  position: relative;
+  margin-left: 50px;
+}
+
+nav a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  left: 50%;
+  background: var(--white);
+  transition: all 200ms ease-in-out;
+}
+
+nav a:hover:after {
+  width: 80%;
+  left: 10%;
+  transition: all 100ms ease-in-out;
+}
+
+nav .phone {
+  flex-grow: 2;
+  text-align: center;
+}
+nav .phone img {
+  vertical-align: middle;
+  margin-right: 18px;
+}
+
+
+nav .menu {
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+nav .menu:hover {
+  transform: rotateY(180deg);
+}
+
+nav .menu img {
+  vertical-align: middle;
 }
