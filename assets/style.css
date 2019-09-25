@@ -143,7 +143,7 @@ section {
 .hero {
   position: relative;
   min-height: 80vh;
-  background: url('../assets/images/hero.jpg') 50% 50% no-repeat;
+  background: url('../assets/images/hero.jpg') 50% 50% no-repeat fixed;
   background-size: cover;
   color: var(--white);
 }
@@ -168,6 +168,7 @@ section {
 .hero .container {
   position: relative;
   z-index: 3;
+  padding-bottom: 320px;
 }
 
 header {
@@ -247,4 +248,63 @@ nav .menu:hover {
 
 nav .menu img {
   vertical-align: middle;
+}
+
+.title {
+  margin: 185px 0 0 0;
+}
+
+.title .what-we-do {
+  font-weight: 800;
+  font-size: 14.4px;
+  line-height: 30px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.title h1 span {
+  color: var(--primary);
+}
+
+.scroll-more {
+  float: right;
+  font-weight: 800;
+  font-size: 12.6px;
+  line-height: 26px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+
+  transform-origin: 100% 0;
+  transform: rotate(90deg);
+}
+
+.scroll-more .arrow {
+  vertical-align: text-top;
+}
+.header-button {
+  position: absolute;
+  width: 50%;
+  left: 0;
+  bottom: 130px;
+  z-index: 3;
+  box-sizing: border-box;
+  padding: 30px 40px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-left: none; 
+  font-size: 18px;
+  line-height: 48px;
+  color: var(--white);
+  outline: none;
+  text-align: right;
+
+  cursor: pointer;
+  transition: background-color 200ms ease-in-out;
+}
+.header-button:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+.header-button img {
+  vertical-align: middle;
+  margin-left: 40px;
 }
